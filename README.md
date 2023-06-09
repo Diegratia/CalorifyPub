@@ -22,6 +22,14 @@ this is the backend of Calorify, Calorify is the user's calorie tracking applica
 - Pub/Sub - Google Cloud Platform (GCP)
 
 
+## Tech Stack
+
+- Express.js
+- Firebase
+- Cloud/Firebase function - Google Cloud Platform (GCP)
+- App Engine - Google Cloud Platform (GCP)
+- Google Scheduler - Google Cloud Platform (GCP)
+- Pub/Sub - Google Cloud Platform (GCP)
 
 ## Dependencies
 
@@ -38,14 +46,58 @@ this is the backend of Calorify, Calorify is the user's calorie tracking applica
  * nodemon: 2.0.22
 
 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Diegratia/CalorifyPub.git
+```
+
+Go to the project directory
+
+```bash
+  cd Calorify
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
 
 
-## Tech Stack
+## Deployment To Google Cloud Platform
 
-- Express.js
-- Firebase
-- Cloud/Firebase function - Google Cloud Platform (GCP)
-- App Engine - Google Cloud Platform (GCP)
-- Google Scheduler - Google Cloud Platform (GCP)
-- Pub/Sub - Google Cloud Platform (GCP)
+To deploy this project you should Clone the project
+
+```bash
+  git clone https://github.com/Diegratia/CalorifyPub.git
+```
+
+Go to the project directory
+
+```bash
+  cd Calorify
+```
+
+Install All dependencies
+
+```bash
+  npm install
+```
+
+Deploy in App Engine
+
+```bash
+  gcloud app deploy
+```
+
+
 
