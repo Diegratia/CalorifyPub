@@ -18,7 +18,10 @@ const getNews = async (req, res) => {
     res.json(newsData);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'An error occurred' });
+    res.status(500).json({
+      code:200,
+      error: 'An error occurred',
+     });
   }
 };
 
