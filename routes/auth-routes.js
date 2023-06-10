@@ -1,5 +1,5 @@
 const express = require('express');
-const {register, oauthGoogle} = require('../controller/auth/registerController');
+const {register, oauthGoogle, registerData, checkEmail} = require('../controller/auth/registerController');
 const {login} = require('../controller/auth/loginController');
 const {logout} = require('../controller/auth/logoutController');
 const {forgotPassword} = require('../controller/auth/forgotController');
@@ -7,6 +7,8 @@ const router = express.Router();
 
 // Registration route
 router.post('/', register);
+router.post('/', registerData);
+router.post('/', checkEmail);
 
 router.post('/', oauthGoogle);
 
@@ -21,6 +23,8 @@ router.post('/', forgotPassword);
 module.exports = router;
 
 module.exports = {
+  registerData: registerData,
+  checkEmail : checkEmail,
   registerMiddleware : register,
   loginMiddleware : login,
   logoutMiddleware : logout,
