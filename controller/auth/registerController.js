@@ -100,20 +100,17 @@ const registerData = async (req, res) => {
 const checkEmail = async (req, res) => {
   try {
     const {email} = req.body;
-
     async function checkIfEmailExists(email) {
       try {
         const methods = await fetchSignInMethodsForEmail(auth, email);
         return methods.length > 0;
       } catch (error) {
-  
         throw new Error('An error occurred while checking if the email exists.');
       }
-    }
-    
+    }  
     const emailExists = await checkIfEmailExists(email);
-if(emailExists)
-{
+
+if(emailExists){
   res.status(409).json({
     code: 409,
     status: 'Conflict!',
