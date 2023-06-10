@@ -48,6 +48,8 @@ const getUser = async (req, res) => {
       const UserDatas = {
         user_id: req.user.uid,
         email: userData.email,
+        username: userData.username,
+        nation: userData.nation,
         age: userData.age,
         gender: userData.gender,
         height: userData.height,
