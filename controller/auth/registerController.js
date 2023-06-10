@@ -112,13 +112,23 @@ const checkEmail = async (req, res) => {
     }
     
     const emailExists = await checkIfEmailExists(email);
+if(emailExists)
+{
+  res.status(409).json({
+    code: 409,
+    status: 'Conflict!',
+    exists: emailExists,
+    message: `${email} already registered, please use another email!`
+  });
+}else{
+  res.status(200).json({
+    code: 200,
+    status: 'OK!',
+    exists: emailExists,
+    message: `user can use ${email} !`
+  });
+}
 
-    res.status(409).json({
-      code: 409,
-      status: 'Conflict!',
-      exists: emailExists,
-      message: `${email} already registered, please use another email!`
-    });
   } catch (error) {
     res.status(500).json({
       code: 500,
