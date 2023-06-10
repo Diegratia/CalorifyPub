@@ -99,7 +99,7 @@ const registerData = async (req, res) => {
 
 const checkEmail = async (req, res) => {
   try {
-    const { email } = req.body;
+    const {email} = req.body;
 
     async function checkIfEmailExists(email) {
       try {
@@ -113,10 +113,11 @@ const checkEmail = async (req, res) => {
     
     const emailExists = await checkIfEmailExists(email);
 
-    res.status(200).json({
-      code: 200,
-      status: 'OK',
+    res.status(409).json({
+      code: 409,
+      status: 'Conflict!',
       exists: emailExists,
+      message: `${email} already registered, please use another email!`
     });
   } catch (error) {
     res.status(500).json({
