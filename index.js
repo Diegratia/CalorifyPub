@@ -14,7 +14,6 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 
-
 app.use('/auth/register', registerMiddleware);
 app.use('/auth/registerdata' ,checkAuth, registerData);
 app.use('/auth/login',loginMiddleware);
