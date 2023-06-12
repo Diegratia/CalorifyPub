@@ -6,6 +6,7 @@ const config = require('./config');
 const apiRoutes = require('./routes/api-routes');
 const usersRoutes = require('./routes/users-routes');
 const {registerMiddleware, loginMiddleware, logoutMiddleware, forgotPassword, registerData, checkEmail} = require('./routes/auth-routes');
+const imageRoutes = require('./routes/image-routes');
 const {checkAuth} = require('./routes/authlogin-routes');
 
 const app = express();
@@ -23,7 +24,7 @@ app.use('/auth/checkemail', checkEmail);
 app.use('/middleware/authlogincheck', checkAuth);
 
 
-
+app.use('/image', imageRoutes);
 app.use('/user', checkAuth, usersRoutes.routes);
 app.use('/api', checkAuth, apiRoutes.routes);
 
