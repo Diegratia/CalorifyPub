@@ -1,6 +1,6 @@
-const { getAuth } = require('firebase/auth');
-const { initializeApp } = require('firebase/app');
-const { getFirestore, collection, doc, setDoc, updateDoc, getDoc } = require('firebase/firestore');
+const {getAuth} = require('firebase/auth');
+const {initializeApp} = require('firebase/app');
+const {getFirestore, collection, doc, setDoc, updateDoc, getDoc} = require('firebase/firestore');
 const config = require('../config');
 
 const initialize = initializeApp(config.firebaseConfig);

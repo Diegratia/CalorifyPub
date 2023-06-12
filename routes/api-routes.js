@@ -1,6 +1,6 @@
 const express = require('express');
-const { getBMIbyId } = require('../controller/api/bmiController');
-const { getBMRbyId } = require('../controller/api/bmrcontroller');
+const {getBMIbyId} = require('../controller/api/bmiController');
+const {getBMRbyId} = require('../controller/api/bmrcontroller');
 const {postNutrition, getNutrition, deleteNutrition, getTotalCalories} = require('../controller/api/nutritionController');
 const router = express.Router();
 

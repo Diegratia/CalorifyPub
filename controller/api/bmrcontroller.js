@@ -11,7 +11,7 @@ const user_id = req.params.id;
     const user = await firestore.collection('users').doc(user_id).get();
     const bmr = user.data();
 
-    const { age, gender, height, weight, activitylevel } = bmr;
+    const {age, gender, height, weight, activitylevel} = bmr;
     const options = {
       method: 'GET',
       url: config.bmr_url,

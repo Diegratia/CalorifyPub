@@ -1,6 +1,6 @@
-const { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, fetchSignInMethodsForEmail} = require('firebase/auth');
-const { initializeApp } = require('firebase/app');
-const { getFirestore, collection, doc, setDoc } = require('firebase/firestore');
+const {getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, fetchSignInMethodsForEmail} = require('firebase/auth');
+const {initializeApp } = require('firebase/app');
+const {getFirestore, collection, doc, setDoc} = require('firebase/firestore');
 const config = require('../../config');
 
 const initialize = initializeApp(config.firebaseConfig);

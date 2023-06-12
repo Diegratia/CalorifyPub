@@ -1,4 +1,4 @@
-const { getAuth, onAuthStateChanged } = require('firebase/auth');
+const {getAuth, onAuthStateChanged} = require('firebase/auth');
 const auth = getAuth();
 
 const CheckAuth = (req, res, next) => {

@@ -12,7 +12,7 @@ const user_id = req.params.id;
     const bmi = user.data();
 
     // catch beberapa field tertentu
-    const { age, weight, height } = bmi;
+    const {age, weight, height} = bmi;
 
     const options = {
       method: 'GET',
